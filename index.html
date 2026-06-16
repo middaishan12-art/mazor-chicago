@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mazor Chicago — Mexican Kitchen</title>
+  <meta name="description" content="Mazor Chicago — handcrafted Mexican cuisine in the heart of Chicago's River West. Fresh tortillas, ribeye tacos, tuna tostadas, and more at 485 N Milwaukee Ave." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">Mazor<span>.</span></a>
+      <nav class="nav__links">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#hours">Hours</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact" class="nav__cta">Find Us</a>
+      </nav>
+      <button class="nav__burger" aria-label="Open menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#menu" onclick="toggleMenu()">Menu</a>
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#hours" onclick="toggleMenu()">Hours</a>
+      <a href="#reviews" onclick="toggleMenu()">Reviews</a>
+      <a href="#contact" onclick="toggleMenu()">Find Us</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">485 N Milwaukee Ave · Chicago</p>
+      <h1 class="hero__title">From scratch.<br /><em>Every time.</em></h1>
+      <p class="hero__sub">Handcrafted tortillas, bold flavors, and a kitchen that takes pride in every plate.</p>
+      <div class="hero__actions">
+        <a href="#menu" class="btn btn--primary">View Menu</a>
+        <a href="tel:3122389792" class="btn btn--ghost">Call to Order</a>
+      </div>
+      <div class="hero__badges">
+        <div class="badge"><span class="badge__star">★</span><strong>5.0</strong><span>39 reviews</span></div>
+        <div class="badge__divider"></div>
+        <div class="badge"><span>Dine-in</span></div>
+        <div class="badge__dot"></div>
+        <div class="badge"><span>Pickup</span></div>
+        <div class="badge__dot"></div>
+        <div class="badge"><span>Delivery</span></div>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__text">
+          <p class="section__label">Our Story</p>
+          <h2 class="section__title">Rooted in tradition.<br />Made for Chicago.</h2>
+          <p>Mazor is a neighborhood Mexican kitchen on Milwaukee Avenue in River West. Everything on the menu is made from scratch — the tortillas, the salsas, the sauces — because shortcuts have no place here.</p>
+          <p>Owner Christian built Mazor on the belief that great food is generous food: big portions, fresh ingredients, and a room where everyone feels at home.</p>
+          <div class="about__stats">
+            <div class="stat"><strong>$10–20</strong><span>per person</span></div>
+            <div class="stat"><strong>5.0★</strong><span>on Google</span></div>
+            <div class="stat"><strong>Scratch</strong><span>kitchen</span></div>
+          </div>
+        </div>
+        <div class="about__visual">
+          <div class="about__card about__card--1">
+            <span class="about__card-icon">🌮</span>
+            <p>Tortillas pressed fresh daily</p>
+          </div>
+          <div class="about__card about__card--2">
+            <span class="about__card-icon">🥑</span>
+            <p>Guacamole made to order</p>
+          </div>
+          <div class="about__card about__card--3">
+            <span class="about__card-icon">🐟</span>
+            <p>Sashimi-grade tuna tostada</p>
+          </div>
+          <div class="about__card about__card--4">
+            <span class="about__card-icon">☕</span>
+            <p>Café de olla brewed in-house</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu section" id="menu">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">What We Serve</p>
+        <h2 class="section__title">The Menu</h2>
+        <p class="section__desc">Made from scratch. Served with care.</p>
+      </div>
+
+      <div class="menu__tabs" id="menuTabs">
+        <button class="tab tab--active" onclick="showCategory('tacos')">Tacos</button>
+        <button class="tab" onclick="showCategory('tostadas')">Tostadas</button>
+        <button class="tab" onclick="showCategory('starters')">Starters</button>
+        <button class="tab" onclick="showCategory('drinks')">Drinks</button>
+      </div>
+
+      <div class="menu__grid" id="tacos">
+        <div class="menu__item">
+          <div class="menu__item-header">
+            <h3>Ribeye Taco</h3>
+            <span class="menu__price">$6</span>
+          </div>
+          <p>Tender ribeye on a house-pressed corn tortilla, topped with fresh salsa and onion.</p>
+          <span class="menu__tag menu__tag--popular">Most Popular</span>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-header">
+            <h3>Al Pastor Taco</h3>
+            <span class="menu__price">$5</span>
+          </div>
+          <p>Marinated pork with pineapple, cilantro, and salsa on a handmade tortilla.</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-header">
+            <h3>Chicken Taco</h3>
+            <span class="menu__price">$5</span>
+          </div>
+          <p>Seasoned chicken with house salsa, fresh onion, and cilantro.</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-header">
+            <h3>Veggie Taco</h3>
+            <span class="menu__price">$4</span>
+          </div>
+          <p>Seasonal vegetables, black beans, and salsa verde on a corn tortilla.</p>
+        </div>
+      </div>
+
+      <div class="menu__grid hidden" id="tostadas">
+        <div class="menu__item">
+          <div class="menu__item-header">
+            <h3>Tuna Tostada</h3>
+            <span class="menu__price">$14</span>
+          </div>
+          <p>Sashimi-grade tuna on a crispy tostada with avocado, micro greens, and house sauce.</p>
+          <span class="menu__tag menu__tag--popular">Fan Favorite</span>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-header">
+            <h3>Shrimp Tostada</h3>
+            <span class="menu__price">$12</span>
+          </div>
+          <p>Grilled shrimp, fresh pico de gallo, avocado crema, and lime.</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-header">
+            <h3>Classic Tostada</h3>
+            <span class="menu__price">$9</span>
+          </div>
+          <p>Refried beans, lettuce, tomato, sour cream, queso fresco, and your choice of protein.</p>
+        </div>
+      </div>
+
+      <div class="menu__grid hidden" id="starters">
+        <div class="menu__item">
+          <div class="menu__item-header">
+            <h3>Guacamole &amp; Chips</h3>
+            <span class="menu__price">$10</span>
+          </div>
+          <p>Freshly mashed avocado with lime, cilantro, jalapeño, and house-made tortilla chips.</p>
+          <span class="menu__tag menu__tag--popular">Made to Order</span>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-header">
+            <h3>Empanadas (3)</h3>
+            <span class="menu__price">$11</span>
+          </div>
+          <p>Flaky hand-folded empanadas with your choice of cheese, beef, or chicken filling.</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-header">
+            <h3>Chips &amp; Salsa</h3>
+            <span class="menu__price">$5</span>
+          </div>
+          <p>House-made tortilla chips with three house-prepared salsas.</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-header">
+            <h3>Elote</h3>
+            <span class="menu__price">$6</span>
+          </div>
+          <p>Mexican street corn with cotija cheese, chili, lime, and mayo.</p>
+        </div>
+      </div>
+
+      <div class="menu__grid hidden" id="drinks">
+        <div class="menu__item">
+          <div class="menu__item-header">
+            <h3>Agua de Jamaica</h3>
+            <span class="menu__price">$4</span>
+          </div>
+          <p>Hibiscus water brewed in-house, lightly sweetened and refreshing.</p>
+          <span class="menu__tag menu__tag--popular">House Made</span>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-header">
+            <h3>Café de Olla</h3>
+            <span class="menu__price">$4</span>
+          </div>
+          <p>Traditional Mexican coffee brewed with cinnamon and piloncillo.</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-header">
+            <h3>Horchata</h3>
+            <span class="menu__price">$4</span>
+          </div>
+          <p>Creamy rice milk with cinnamon and a hint of vanilla.</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-header">
+            <h3>Tamarindo</h3>
+            <span class="menu__price">$4</span>
+          </div>
+          <p>Sweet and tangy tamarind agua fresca, made fresh daily.</p>
+        </div>
+      </div>
+
+      <p class="menu__note">* Menu items and prices are illustrative. Call us for today's full menu.</p>
+    </div>
+  </section>
+
+  <!-- HOURS -->
+  <section class="hours section" id="hours">
+    <div class="container">
+      <div class="hours__grid">
+        <div class="hours__text">
+          <p class="section__label">When to Find Us</p>
+          <h2 class="section__title">Hours</h2>
+          <p>We're open most of the week. Come in for lunch, dinner, or a late-night taco on Friday and Saturday.</p>
+          <a href="tel:3122389792" class="btn btn--primary" style="margin-top:2rem; display:inline-flex;">
+            (312) 238-9792
+          </a>
+        </div>
+        <div class="hours__table-wrap">
+          <table class="hours__table">
+            <tbody>
+              <tr>
+                <td>Monday</td>
+                <td>11 AM – 9 PM</td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td>11 AM – 9 PM</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>11 AM – 9 PM</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td>11 AM – 9 PM</td>
+              </tr>
+              <tr class="hours__row--late">
+                <td>Friday</td>
+                <td>11 AM – 12 AM</td>
+              </tr>
+              <tr class="hours__row--late">
+                <td>Saturday</td>
+                <td>11 AM – 12 AM</td>
+              </tr>
+              <tr class="hours__row--closed">
+                <td>Sunday</td>
+                <td>Closed</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="hours__note">Hours may vary on holidays. Call ahead to confirm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews section" id="reviews">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">What People Say</p>
+        <h2 class="section__title">5.0 on Google <span class="reviews__stars">★★★★★</span></h2>
+        <p class="section__desc">39 reviews and counting.</p>
+      </div>
+      <div class="reviews__grid">
+        <div class="review__card">
+          <div class="review__stars">★★★★★</div>
+          <p class="review__text">"We were walking by and were immediately intrigued by the restaurant. Everything was delicious! I was thoroughly impressed by the quality of the food."</p>
+          <div class="review__author">
+            <div class="review__avatar">M</div>
+            <div>
+              <strong>Maria Alejandra Jackson</strong>
+              <span>Local Guide · 2 weeks ago</span>
+            </div>
+          </div>
+        </div>
+        <div class="review__card">
+          <div class="review__stars">★★★★★</div>
+          <p class="review__text">"I've been waiting for this place to open — so happy they are in the neighborhood. The owner is very kind. The tuna tostada was my favorite but everything was great."</p>
+          <div class="review__author">
+            <div class="review__avatar">J</div>
+            <div>
+              <strong>Jessica</strong>
+              <span>Local Guide · 2 weeks ago</span>
+            </div>
+          </div>
+        </div>
+        <div class="review__card">
+          <div class="review__stars">★★★★★</div>
+          <p class="review__text">"Everything is made from scratch, right down to the tortillas, and you can taste the difference. Christian, the owner is very friendly — this place has all the right vibes."</p>
+          <div class="review__author">
+            <div class="review__avatar">M</div>
+            <div>
+              <strong>Michael Lofton II</strong>
+              <span>Local Guide · 2 weeks ago</span>
+            </div>
+          </div>
+        </div>
+        <div class="review__card review__card--highlight">
+          <div class="review__quote">"</div>
+          <p class="review__text review__text--large">Excellent service, friendly staff and the tacos + tuna tostada are elite.</p>
+          <div class="review__stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / MAP -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__info">
+          <p class="section__label">Find Us</p>
+          <h2 class="section__title">Come visit.</h2>
+          <div class="contact__detail">
+            <span class="contact__icon">📍</span>
+            <div>
+              <strong>Address</strong>
+              <p>485 N Milwaukee Ave<br />Chicago, IL 60654</p>
+            </div>
+          </div>
+          <div class="contact__detail">
+            <span class="contact__icon">📞</span>
+            <div>
+              <strong>Phone</strong>
+              <p><a href="tel:3122389792">(312) 238-9792</a></p>
+            </div>
+          </div>
+          <div class="contact__detail">
+            <span class="contact__icon">🚗</span>
+            <div>
+              <strong>Options</strong>
+              <p>Dine-in · Curbside Pickup · Delivery</p>
+            </div>
+          </div>
+          <div class="contact__actions">
+            <a href="https://maps.google.com/?q=485+N+Milwaukee+Ave+Chicago+IL+60654" target="_blank" rel="noopener" class="btn btn--primary">Get Directions</a>
+          </div>
+        </div>
+        <div class="contact__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.0!2d-87.6567!3d41.8893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2cd3b9c0e5e7%3A0x0!2s485+N+Milwaukee+Ave%2C+Chicago%2C+IL+60654!5e0!3m2!1sen!2sus!4v1"
+            width="100%"
+            height="100%"
+            style="border:0; border-radius: 12px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mazor Chicago location map">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <p class="footer__logo">Mazor<span>.</span></p>
+          <p>485 N Milwaukee Ave<br />Chicago, IL 60654</p>
+        </div>
+        <div class="footer__links">
+          <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+          <a href="#hours">Hours</a>
+          <a href="#reviews">Reviews</a>
+          <a href="tel:3122389792">(312) 238-9792</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Mazor Chicago. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
